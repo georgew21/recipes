@@ -1,0 +1,33 @@
+#!/usr/bin/env python2
+# vim:fileencoding=utf-8
+from __future__ import unicode_literals, division, absolute_import, print_function
+from calibre.web.feeds.news import BasicNewsRecipe
+
+class AdvancedUserRecipe1590001570(BasicNewsRecipe):
+    title          = 'News'
+    oldest_article = 7
+    max_articles_per_feed = 100
+    auto_cleanup   = True
+    remove_tags    = [dict(name='img')]
+    feeds          = [
+	('tpp.gr', 'https://thepressproject.gr/feed/rss/'),
+	('efsyn', 'https://www.efsyn.gr/feed.xml'),
+        ('ert- greece', 'https://www.ert.gr/news/ellada/feed'),
+        ('ert- economy', 'https://www.ert.gr/news/oikonomia/feed'),
+        ('ert- international', 'https://www.ert.gr/news/diethni/feed/'),
+        ('ert- cultural', 'https://www.ert.gr/news/politismos/feed'),
+        ('ert- science', 'https://www.ert.gr/news/epistimi/feed'),
+        ('ert- health', 'https://www.ert.gr/news/evzoia/feed/'),
+	('902- politic', 'https://www.902.gr/feed/31'),
+        ('902- economy', 'https://www.902.gr/feed/34'),
+        ('902- articles', 'https://www.902.gr/feed/42226'),
+        ('902- international', 'https://www.902.gr/feed/33'),
+        ('902- cultural', 'https://www.902.gr/feed/40'),
+        ('902- sports', 'https://www.902.gr/feed/39'),
+        ('\u03a3\u03c7\u03cc\u03bb\u03b9\u03b1', 'https://www.902.gr/feed/38'),
+	('Alfavita', 'https://www.alfavita.gr/rss.xml'),
+	 ('\u03a4\u03bf \u0392\u03ae\u03bc\u03b1', 'https://www.tovima.gr/feed/'),
+('Enwsi.gr', 'https://www.enwsi.gr/feed/'),
+        ('sport24', 'https://www.sport24.gr/?widget=rssfeed&view=feed&contentId=174866'),
+        ('gazzetta', 'https://www.gazzetta.gr/rss.xml'),
+    ]
